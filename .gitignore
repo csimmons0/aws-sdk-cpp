@@ -76,3 +76,6 @@ aws-cpp-sdk-core/include/aws/core/SDKConfig.h
 
 #nuget
 *.nupkg
+
+# Generated vitalservices client
+/aws-cpp-sdk-vitalservices/

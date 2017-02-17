@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "version" : "2017-02-11T04:33:00Z",
+    "version" : "2017-02-11T17:49:57Z",
     "title" : "VitalServices"
   },
   "host" : "h6wguq9ghl.execute-api.us-east-1.amazonaws.com",
