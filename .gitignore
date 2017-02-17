@@ -77,5 +77,7 @@ aws-cpp-sdk-core/include/aws/core/SDKConfig.h
 #nuget
 *.nupkg
 
-# Generated vitalservices client
+# DocLily-specific
+VitalServices-prod-swagger.json
+vitalservices-2016-11-23.normal.json
 /aws-cpp-sdk-vitalservices/

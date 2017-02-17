@@ -61,10 +61,12 @@ def build_metadata(swagger_schema):
     version_date_time_string = swagger_schema["info"]["version"]
     match = re.match(r"(\d{4}-\d{2}-\d{2})T", version_date_time_string)
     aws_api_version = match.group(1)
-    service_name = swagger_schema["info"]["title"]
+    service_name = "VitalServices"
+    host = swagger_schema["host"]
+    endpoint_prefix = re.match(r"(.+\.execute-api)", host).group(1)
     return collections.OrderedDict([
         ("apiVersion", aws_api_version),
-        ("endpointPrefix", "h6wguq9ghl.execute-api"),
+        ("endpointPrefix", endpoint_prefix),
         ("protocol", "application/json"),
         ("serviceFullName", service_name),
         ("signingName", "execute-api"),
