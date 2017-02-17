@@ -8,7 +8,7 @@ BUILD_DIR=$BASE_DIR/build/GenerateVitalClient
 STAGE_NAME="prod"
 SWAGGER_FILE_PATH=$BASE_DIR/VitalServices-prod-swagger.json
 AWS_CPP_SOURCE_DIR=$BASE_DIR
-REST_API_ID=`cat ~/.my-gateway-id`
+REST_API_ID=$(cat ~/.my-gateway-id)
 
 rm -rf $BASE_DIR/aws-cpp-sdk-vitalservices
 aws apigateway get-export --rest-api-id $REST_API_ID --stage-name $STAGE_NAME --export-type swagger $SWAGGER_FILE_PATH
