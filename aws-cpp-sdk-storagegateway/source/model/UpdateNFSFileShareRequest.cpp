@@ -27,7 +27,8 @@ UpdateNFSFileShareRequest::UpdateNFSFileShareRequest() :
     m_kMSEncryptedHasBeenSet(false),
     m_kMSKeyHasBeenSet(false),
     m_nFSFileShareDefaultsHasBeenSet(false),
-    m_defaultStorageClassHasBeenSet(false)
+    m_defaultStorageClassHasBeenSet(false),
+    m_clientListHasBeenSet(false)
 {
 }
 
@@ -65,6 +66,17 @@ Aws::String UpdateNFSFileShareRequest::SerializePayload() const
 
   }
 
+  if(m_clientListHasBeenSet)
+  {
+   Array<JsonValue> clientListJsonList(m_clientList.size());
+   for(unsigned clientListIndex = 0; clientListIndex < clientListJsonList.GetLength(); ++clientListIndex)
+   {
+     clientListJsonList[clientListIndex].AsString(m_clientList[clientListIndex]);
+   }
+   payload.WithArray("ClientList", std::move(clientListJsonList));
+
+  }
+
   return payload.WriteReadable();
 }
 
@@ -75,6 +87,7 @@ Aws::Http::HeaderValueCollection UpdateNFSFileShareRequest::GetRequestSpecificHe
   return headers;
 
 }
+
 
 
 

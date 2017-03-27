@@ -37,6 +37,11 @@ namespace Model
     DescribeVolumesRequest();
     Aws::String SerializePayload() const override;
 
+
+  protected:
+    void DumpBodyToUrl(Aws::Http::URI& uri ) const override;
+
+  public:
     /**
      * <p>Checks whether you have the required permissions for the action, without
      * actually making the request, and provides an error response. If you have the
@@ -450,8 +455,8 @@ namespace Model
      * only returns <code>MaxResults</code> results in a single page along with a
      * <code>NextToken</code> response element. The remaining results of the initial
      * request can be seen by sending another <code>DescribeVolumes</code> request with
-     * the returned <code>NextToken</code> value. This value can be between 5 and 1000;
-     * if <code>MaxResults</code> is given a value larger than 1000, only 1000 results
+     * the returned <code>NextToken</code> value. This value can be between 5 and 500;
+     * if <code>MaxResults</code> is given a value larger than 500, only 500 results
      * are returned. If this parameter is not used, then <code>DescribeVolumes</code>
      * returns all results. You cannot specify this parameter and the volume IDs
      * parameter in the same request.</p>
@@ -464,8 +469,8 @@ namespace Model
      * only returns <code>MaxResults</code> results in a single page along with a
      * <code>NextToken</code> response element. The remaining results of the initial
      * request can be seen by sending another <code>DescribeVolumes</code> request with
-     * the returned <code>NextToken</code> value. This value can be between 5 and 1000;
-     * if <code>MaxResults</code> is given a value larger than 1000, only 1000 results
+     * the returned <code>NextToken</code> value. This value can be between 5 and 500;
+     * if <code>MaxResults</code> is given a value larger than 500, only 500 results
      * are returned. If this parameter is not used, then <code>DescribeVolumes</code>
      * returns all results. You cannot specify this parameter and the volume IDs
      * parameter in the same request.</p>
@@ -478,8 +483,8 @@ namespace Model
      * only returns <code>MaxResults</code> results in a single page along with a
      * <code>NextToken</code> response element. The remaining results of the initial
      * request can be seen by sending another <code>DescribeVolumes</code> request with
-     * the returned <code>NextToken</code> value. This value can be between 5 and 1000;
-     * if <code>MaxResults</code> is given a value larger than 1000, only 1000 results
+     * the returned <code>NextToken</code> value. This value can be between 5 and 500;
+     * if <code>MaxResults</code> is given a value larger than 500, only 500 results
      * are returned. If this parameter is not used, then <code>DescribeVolumes</code>
      * returns all results. You cannot specify this parameter and the volume IDs
      * parameter in the same request.</p>
