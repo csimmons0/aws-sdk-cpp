@@ -39,6 +39,6 @@ macro(add_project name description)
 	cmake_policy(SET CMP0056 NEW)
     endif()
 
-    project(${name} VERSION "${PROJECT_VERSION}" LANGUAGES CXX C)
+    project(${name} VERSION "${PROJECT_VERSION}" LANGUAGES CXX)
 
 endmacro()
